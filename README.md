@@ -99,7 +99,7 @@ This configuration has been tested on Mac & Linux.
 Run this automated one-liner from the directory you want to install your project to:
 
 ```bash
-curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/onelinesetup | bash -s -- magento2.test 2.3.3
+curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup?token=AB5MMZ3Z75GSQHLH5VL5UBK5VSIRG | bash -s -- magento2.test 2.3.3
 ```
 
 The `magento2.test` above defines the hostname to use, and the `2.3.3` defines the Magento version to install. Note that since we need a write to `/etc/hosts` for DNS resolution, you will be prompted for your system password during setup.
