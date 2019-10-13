@@ -44,11 +44,13 @@ View Dockerfiles:
 
 > macOS & Linux Only
 
+Default Magento
+
 ```bash
 curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup?token=AB5MMZ3Z75GSQHLH5VL5UBK5VSIRG | bash -s -- topvalue.local 2.3.3
 ```
 
-With Example Data
+Default Magento With Sample Data
 ```bash
 curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup?token=AB5MMZ3Z75GSQHLH5VL5UBK5VSIRG | bash -s -- topvalue.local with-samples-2.3.3
 ```
