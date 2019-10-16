@@ -38,6 +38,12 @@ View Dockerfiles:
   - 6.5
       - [`latest`, `6.5`, `6.5.4-0`](https://github.com/markshust/docker-magento/tree/master/images/elasticsearch/6.5)
 
+## Prerequisites
+
+This setup assumes you are running Docker on a computer with at least 4GB of allocated RAM, a dual-core, and an SSD hard drive. [Download & Install Docker Desktop](https://www.docker.com/products/docker-desktop).
+
+This configuration has been tested on Mac & Linux.
+
 ## Setup
 
 ### Automated Setup (New Project)
