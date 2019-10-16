@@ -44,6 +44,8 @@ View Dockerfiles:
 
 > macOS & Linux Only
 
+Run this automated one-liner from the directory you want to install your project to:
+
 Default Magento
 
 ```bash
