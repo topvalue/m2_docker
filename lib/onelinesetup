@@ -1,5 +1,5 @@
 #!/bin/bash
-DOMAIN=${1:-topvalue.local}
+DOMAIN=${1:-magento2.test}
 VERSION=${2:-2.3.3}
 
 curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/template?token=AB5MMZ6SL3FLJXBEAGH4QLK5VSIHQ|bash -s - magento-2
