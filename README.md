@@ -55,12 +55,12 @@ Run this automated one-liner from the directory you want to install your project
 Default Magento
 
 ```bash
-curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup?token=AB5MMZ7UUKFQOH6NVY46AZK5W2JPW | bash -s -- magento2.test 2.3.3
+curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup | bash -s -- magento2.test 2.3.3
 ```
 
 Default Magento With Sample Data
 ```bash
-curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup?token=AB5MMZ7UUKFQOH6NVY46AZK5W2JPW | bash -s -- magento2.test with-samples-2.3.3
+curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelinesetup | bash -s -- magento2.test with-samples-2.3.3
 ```
 
 ## Custom CLI Commands
