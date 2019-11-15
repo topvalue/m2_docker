@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#--------------------------------------------------
+# Check Platform
+#--------------------------------------------------
+platform='unknown'
+uname=`uname`
+if [[ "$uname" == 'Darwin' ]]; then
+   platform='darwin'
+elif [[ "$uname" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$uname" == 'FreeBSD' ]]; then
+   platform='freebsd'
+fi
+
+#--------------------------------------------------
+# Check brew exist
+#--------------------------------------------------
+if [ $platform == "darwin" ]; then
+  brew=$(which brew)
+  if [ ${#brew} == 0 ]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+fi
+
+#--------------------------------------------------
+# Check modman exist
+#--------------------------------------------------
+modman=$(which modman)
+if [ ${#modman} == 0 ]; then
+  if [ $platform == "darwin" ]; then
+   echo "Install modman.."
+   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+   brew install modman
+  elif [ $platform == "linux" ]; then
+    bash < <(curl -s -L https://raw.github.com/colinmollenhour/modman/master/modman-installer)  
+  fi
+fi
+
+cd src
+echo $(pwd)
+modman init
+echo "Install magento extension.."
+modman clone git@github.com:topvalue/m2_onestep-checkout.git
+
+cd ..

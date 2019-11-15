@@ -93,6 +93,8 @@ echo "Copying files from container to host after install..."
 bin/copyfromcontainer app
 bin/copyfromcontainer vendor
 
+bin/modman
+
 echo "Restarting containers with host bind mounts for dev..."
 bin/restart
 

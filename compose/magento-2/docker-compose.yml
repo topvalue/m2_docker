@@ -16,12 +16,16 @@ services:
       - ~/.composer:/var/www/.composer:delegated
       - appdata:/var/www/html
       - sockdata:/sock
+    environment:
+      - TZ=Asia/Bangkok
 
   phpfpm:
     image: markoshust/magento-php:7.3-fpm-1
     links:
       - db
     volumes: *appvolumes
+    environment:
+      - TZ=Asia/Bangkok
 
   db:
     image: percona:5.7
@@ -30,20 +34,28 @@ services:
     env_file: env/db.env
     volumes:
       - dbdata:/var/lib/mysql
+    environment:
+      - TZ=Asia/Bangkok
 
   redis:
     image: redis:5.0
+    environment:
+      - TZ=Asia/Bangkok
 
   elasticsearch:
     image: markoshust/magento-elasticsearch:6.5.4-0
     ports:
       - "9200:9200"
       - "9300:9300"
+    environment:
+      - TZ=Asia/Bangkok
 
   kibana:
     image: docker.elastic.co/kibana/kibana:6.5.4
     ports:
       - "5601:5601"
+    environment:
+      - TZ=Asia/Bangkok
 
   # Disabling cron by default as it uses higher CPU, enable if needed
   #cron:
@@ -54,6 +66,8 @@ services:
   #  links:
   #    - db
   #  volumes: *appvolumes
+  #  environment:
+  #   - TZ=Asia/Bangkok
 
 volumes:
   appdata:
