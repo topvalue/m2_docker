@@ -44,6 +44,6 @@ echo "Install magento extension.."
 modman clone git@github.com:topvalue/m2_onestep-checkout.git
 
 cd ..
-bin/magento setup:upgrade
-bin/magento setup:di:compile
-bin/magento setup:static-content:deploy -f
+bin/clinotty bin/magento setup:upgrade
+bin/clinotty bin/magento setup:di:compile
+bin/clinotty bin/magento setup:static-content:deploy -f
