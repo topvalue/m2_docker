@@ -69,37 +69,35 @@ bin/clinotty bin/magento setup:install \
   --timezone=Asia/Bangkok \
   --use-rewrites=1
 
-  echo "end debug"
+echo "Turning on developer mode.."
+bin/clinotty bin/magento deploy:mode:set developer
 
-# echo "Turning on developer mode.."
-# bin/clinotty bin/magento deploy:mode:set developer
+bin/clinotty bin/magento indexer:reindex
 
-# bin/clinotty bin/magento indexer:reindex
+echo "Forcing deploy of static content to speed up initial requests..."
+bin/clinotty bin/magento setup:static-content:deploy -f 
 
-# echo "Forcing deploy of static content to speed up initial requests..."
-# bin/clinotty bin/magento setup:static-content:deploy -f 
+echo "Enabling Redis for cache..."
+bin/clinotty bin/magento setup:config:set --no-interaction --cache-backend=redis --cache-backend-redis-server=redis --cache-backend-redis-db=0
 
-# echo "Enabling Redis for cache..."
-# bin/clinotty bin/magento setup:config:set --no-interaction --cache-backend=redis --cache-backend-redis-server=redis --cache-backend-redis-db=0
+echo "Enabling Redis for Full Page Cache..."
+bin/clinotty bin/magento setup:config:set --no-interaction  --page-cache=redis --page-cache-redis-server=redis --page-cache-redis-db=1
 
-# echo "Enabling Redis for Full Page Cache..."
-# bin/clinotty bin/magento setup:config:set --no-interaction  --page-cache=redis --page-cache-redis-server=redis --page-cache-redis-db=1
+echo "Enabling Redis for session..."
+bin/clinotty bin/magento setup:config:set --no-interaction --session-save=redis --session-save-redis-host=redis --session-save-redis-log-level=4 --session-save-redis-db=2
 
-# echo "Enabling Redis for session..."
-# bin/clinotty bin/magento setup:config:set --no-interaction --session-save=redis --session-save-redis-host=redis --session-save-redis-log-level=4 --session-save-redis-db=2
+echo "Clearing the cache for good measure..."
+bin/clinotty bin/magento cache:flush
 
-# echo "Clearing the cache for good measure..."
-# bin/clinotty bin/magento cache:flush
+echo "Copying files from container to host after install..."
+bin/copyfromcontainer app
+bin/copyfromcontainer vendor
 
-# echo "Copying files from container to host after install..."
-# bin/copyfromcontainer app
-# bin/copyfromcontainer vendor
+echo "Install modman and magento extensions..."
+bin/modman
 
-# # echo "Install modman and magento extensions..."
-# # bin/modman
+echo "Restarting containers with host bind mounts for dev..."
+bin/restart
 
-# echo "Restarting containers with host bind mounts for dev..."
-# bin/restart
-
-# echo "Docker development environment setup complete."
-# echo "You may now access your Magento instance at https://${BASE_URL}/"
+echo "Docker development environment setup complete."
+echo "You may now access your Magento instance at https://${BASE_URL}/"
