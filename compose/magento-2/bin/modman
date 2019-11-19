@@ -43,8 +43,12 @@ modman init
 echo "Install magento extensions.."
 modman clone git@github.com:topvalue/m2_onestep-checkout.git
 modman clone git@github.com:topvalue/m2_sm-market-theme.git
+modman clone git@github.com:topvalue/m2_elastic-search.git
 
 cd ..
-bin/clinotty bin/magento setup:upgrade
-bin/clinotty bin/magento setup:di:compile
-bin/clinotty bin/magento setup:static-content:deploy -f
+# bin/clinotty bin/magento setup:upgrade
+# sleep 1
+# bin/clinotty bin/magento setup:di:compile
+# sleep 1
+# bin/clinotty bin/magento setup:static-content:deploy -f
+# sleep 1
