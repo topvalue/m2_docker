@@ -44,6 +44,7 @@ echo "Install magento extensions.."
 modman clone git@github.com:topvalue/m2_onestep-checkout.git
 modman clone git@github.com:topvalue/m2_sm-market-theme.git
 modman clone git@github.com:topvalue/m2_elastic-search.git
+modman clone git@github.com:topvalue/m2_improved-layered-navigation.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
