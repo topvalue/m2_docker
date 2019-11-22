@@ -17,6 +17,7 @@ services:
       #- ./src/var/report:/var/www/html/var/report:delegated
       - ./src/.modman:/var/www/html/.modman:delegated
       - ./src/pub/media:/var/www/html/pub/media:delegated
+      - ./src/webhook:/var/www/html/webhook:delegated
 
   phpfpm:
     volumes: *appvolumes
