@@ -49,6 +49,8 @@ modman clone git@github.com:topvalue/m2_improved-layered-navigation.git
 modman clone git@github.com:topvalue/m2_promo-banners.git
 modman clone git@github.com:topvalue/m2_order-attributes.git
 modman clone git@github.com:topvalue/m2_automatic-related-products.git
+modman clone git@github.com:topvalue/m2_custom-registration-fields.git
+modman clone git@github.com:topvalue/m2_ajax-shopping-cart.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade

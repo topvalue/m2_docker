@@ -98,6 +98,13 @@ curl -s https://raw.githubusercontent.com/topvalue/m2_docker/master/lib/onelines
 - `bin/stop`: Stop all containers.
 - `bin/update`: Update your project to the most recent version of `docker-magento`.
 - `bin/xdebug`: Disable or enable Xdebug. Accepts params `disable` (default) or `enable`. Ex. `bin/xdebug enable`
+- `bin/modman`: Install all Magento extension
+
+## Run Commands after complete Install Magento
+
+- `bin/magento setup:upgrade`
+- `bin/magento setup:di:compile`
+- `bin/magento setup:static-content:deploy`
 
 ## Misc Info
 
