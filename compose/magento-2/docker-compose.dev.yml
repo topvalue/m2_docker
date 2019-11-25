@@ -18,6 +18,8 @@ services:
       - ./src/.modman:/var/www/html/.modman:delegated
       - ./src/pub/media:/var/www/html/pub/media:delegated
       - ./src/webhook:/var/www/html/webhook:delegated
+      # SSH-KEY for GitHub (used for webhook)
+      - ~/.ssh:/var/www/.ssh:delegated
 
   phpfpm:
     volumes: *appvolumes
