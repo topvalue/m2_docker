@@ -51,6 +51,19 @@ modman clone git@github.com:topvalue/m2_order-attributes.git
 modman clone git@github.com:topvalue/m2_automatic-related-products.git
 modman clone git@github.com:topvalue/m2_custom-registration-fields.git
 modman clone git@github.com:topvalue/m2_ajax-shopping-cart.git
+modman clone git@github.com:topvalue/m2_cookie-consent.git
+modman clone git@github.com:topvalue/m2_product-feed.git
+modman clone git@github.com:topvalue/m2_admin-actions-log.git
+modman clone git@github.com:topvalue/m2_special-promotions-pro.git
+modman clone git@github.com:topvalue/m2_extended-product-grid.git
+modman clone git@github.com:topvalue/m2_social_login.git
+modman clone git@github.com:topvalue/m2_reward-points.git
+modman clone git@github.com:topvalue/m2_custom-promo-conditions.git
+modman clone git@github.com:topvalue/m2_custom-stock-status.git
+#modman clone git@github.com:topvalue/m2_mass-product-actions.git
+modman clone git@github.com:topvalue/m2_free-gift.git
+modman clone git@github.com:topvalue/m2_abandoned-cart-email.git
+modman clone git@github.com:topvalue/m2_countdown-timer.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
