@@ -71,6 +71,11 @@ modman clone git@github.com:topvalue/m2_product-labels.git
 modman clone git@github.com:topvalue/m2_seo-toolkit.git
 modman clone git@github.com:topvalue/m2_generate-and-import-coupons.git
 modman clone git@github.com:topvalue/m2_promotions-manager.git
+modman clone git@github.com:topvalue/m2_advanced-product-reviews.git
+modman clone git@github.com:topvalue/m2_omise.git
+modman clone git@github.com:topvalue/m2_visual-merchandiser.git
+modman clone git@github.com:topvalue/m2_smtp.git
+modman clone git@github.com:topvalue/m2_infinite-scroll.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
