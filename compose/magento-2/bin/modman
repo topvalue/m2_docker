@@ -76,6 +76,7 @@ modman clone git@github.com:topvalue/m2_omise.git
 modman clone git@github.com:topvalue/m2_visual-merchandiser.git
 modman clone git@github.com:topvalue/m2_smtp.git
 modman clone git@github.com:topvalue/m2_infinite-scroll.git
+modman clone git@github.com:topvalue/m2_netsuite.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
