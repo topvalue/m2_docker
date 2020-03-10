@@ -45,7 +45,7 @@ modman clone git@github.com:topvalue/m2_onestep-checkout.git
 modman clone git@github.com:topvalue/m2_sm-market-theme.git
 modman clone git@github.com:topvalue/m2_elastic-search.git
 modman clone git@github.com:topvalue/m2_improved-layered-navigation.git
-#modman clone git@github.com:topvalue/m2_city-region.git
+modman clone git@github.com:topvalue/m2_city-region.git
 modman clone git@github.com:topvalue/m2_promo-banners.git
 modman clone git@github.com:topvalue/m2_order-attributes.git
 modman clone git@github.com:topvalue/m2_automatic-related-products.git
@@ -56,11 +56,16 @@ modman clone git@github.com:topvalue/m2_product-feed.git
 modman clone git@github.com:topvalue/m2_admin-actions-log.git
 modman clone git@github.com:topvalue/m2_special-promotions-pro.git
 modman clone git@github.com:topvalue/m2_extended-product-grid.git
+
+#--------------------------------------------------
 modman clone git@github.com:topvalue/m2_social-login.git
+### Note ### m2_social-login require manual install some library
+#--------------------------------------------------
+
 modman clone git@github.com:topvalue/m2_reward-points.git
 modman clone git@github.com:topvalue/m2_custom-promo-conditions.git
 modman clone git@github.com:topvalue/m2_custom-stock-status.git
-#modman clone git@github.com:topvalue/m2_mass-product-actions.git
+modman clone git@github.com:topvalue/m2_mass-product-actions.git
 modman clone git@github.com:topvalue/m2_free-gift.git
 modman clone git@github.com:topvalue/m2_abandoned-cart-email.git
 modman clone git@github.com:topvalue/m2_countdown-timer.git
@@ -72,11 +77,31 @@ modman clone git@github.com:topvalue/m2_seo-toolkit.git
 modman clone git@github.com:topvalue/m2_generate-and-import-coupons.git
 modman clone git@github.com:topvalue/m2_promotions-manager.git
 modman clone git@github.com:topvalue/m2_advanced-product-reviews.git
+
+#--------------------------------------------------
 modman clone git@github.com:topvalue/m2_omise.git
+### Note ### m2_omise require manual install some library
+#--------------------------------------------------
+
 modman clone git@github.com:topvalue/m2_visual-merchandiser.git
 modman clone git@github.com:topvalue/m2_smtp.git
 modman clone git@github.com:topvalue/m2_infinite-scroll.git
-modman clone git@github.com:topvalue/m2_netsuite.git
+#modman clone git@github.com:topvalue/m2_netsuite.git
+modman clone git@github.com:topvalue/m2_asynchronous-reindexing.git
+modman clone git@github.com:topvalue/m2_payment-restrictions.git
+
+#--------------------------------------------------
+modman clone git@github.com:topvalue/m2_mailchimp.git
+### Note ### m2_mailchimp require manual install some library
+#--------------------------------------------------
+
+#--------------------------------------------------
+modman clone git@github.com:topvalue/m2_import-export.git
+### Note ### m2_import-export require manual install some library
+#--------------------------------------------------
+
+modman clone git@github.com:topvalue/m2_meetanshi-sms.git
+modman clone git@github.com:topvalue/m2_digital-data-layer.git
 
 cd ..
 # bin/clinotty bin/magento setup:upgrade
